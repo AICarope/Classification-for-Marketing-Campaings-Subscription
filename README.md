@@ -28,7 +28,7 @@ Training set shape: (3616, 35), Testing set shape: (905, 35)
 
 ### Modeling
 - Applied multiple classification algorithms to predict subscription likelihood.
-- Models used:
+- Models used (Classifier Modifications):
   - Logistic Regression
   - Decision Trees
   - Random Forest
