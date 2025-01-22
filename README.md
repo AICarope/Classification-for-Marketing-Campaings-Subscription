@@ -114,7 +114,7 @@ The following features were found to have the highest correlation with the targe
 - Python
 
 ### Libraries
-- Pandas, NumPy, Matplotlib, Scikit-learn
+- Pandas, NumPy, Matplotlib, Scikit-learn, Seaborn
 
 ### Tools
 - Version Control: Git/GitHub
