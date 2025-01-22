@@ -1,0 +1,35 @@
+PROMPT
+Based on the results provide the steps to create a new repository for GitHub
+Create the content for the repository following the CRISP-DM methodology
+Provide the code how to create th repository in guthub and the content to do cut and paste in github
+Create the content using this titles and subtitles
+Include the steps to commit in Visual Code
+
+
+Title
+Python Notbeook
+Business Understanding
+
+Objective
+-Goal
+-Data Understanding
+-Intitial analysis
+
+Data Preparation
+-Steps Taken
+-Modeling
+-Alogrithms applied
+
+Top Feautures Identified
+Evaluation
+Metrics Used
+-Insigths
+
+Deplyment and Recommendations
+-Next Steps
+
+Technologies Used
+Programming Languges
+Libraries
+Version Control
+
