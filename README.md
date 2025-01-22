@@ -1,19 +1,29 @@
 # Classification for Marketing Campaigns Subscription
 
+This repository contains machne learning classifier algos toidentify customers likely to subscribe to a marketing campaign using historical data on demographics, behavior, and campaign engagement.
+
+## Python Notebook
+You can access the Jupyter notebook [here](https://github.com/AICarope/Classification-for-Marketing-Campaings-Subscription/blob/main/1.EDA%26ML.ipynb)
+
 ## Business Understanding
 
-### Objective
+### Objective**: Compare the results of k-nearest neighbors, logistic regression, decision trees, and support vector machines
+
 - **Goal**: Classify customers likely to subscribe to a campaign based on historical data.
+            To compare the performance of the classifiers (k-nearest neighbors, logistic regression, decision trees, and support vector machines)
 - **Data Understanding**: Analyze customer demographics, past behavior, and engagement with previous campaigns.
 - **Initial Analysis**: Conduct exploratory data analysis (EDA) to identify trends and patterns in the data.
 
 ## Data Preparation
-
+-The data set contains **4521 rows** and **43 columns** 
 ### Steps Taken
-1. **Data Cleaning**: Removed duplicates and handled missing values.
+1. **Data Cleaning**: Inspection of duplicates and handled missing values.
 2. **Feature Engineering**: Created additional features based on domain knowledge.
 3. **Scaling**: Standardized numerical features for model compatibility.
 4. **Categorical Encoding**: Converted categorical features into numeric using one-hot encoding.
+Shape of X before dropping: (4521, 42)
+Shape of X after dropping: (4521, 35)
+Training set shape: (3616, 35), Testing set shape: (905, 35)
 
 ### Modeling
 - Applied multiple classification algorithms to predict subscription likelihood.
