@@ -94,7 +94,8 @@ The following features were found to have the highest correlation with the targe
 - **Subscription**:
   - `Yes` 11.52% (521) people suscribed.
   - `No` 88.4% (4000) did not suscribed.
-    ![image](https://github.com/user-attachments/assets/28119ccf-ec39-4ea1-845d-4a736725ad0e)
+    
+![image](https://github.com/user-attachments/assets/28119ccf-ec39-4ea1-845d-4a736725ad0e)
 
 - **Critical Predictors**:
   - `duration`: Longer call durations correlate strongly with subscriptions.
