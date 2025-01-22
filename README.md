@@ -21,10 +21,17 @@ Compare the results of k-nearest neighbors, logistic regression, decision trees,
 1. **Data Cleaning**: Inspection of duplicates and handled missing values.
 2. **Feature Engineering**: Created additional features based on domain knowledge.
 3. **Scaling**: Standardized numerical features for model compatibility.
-4. **Categorical Encoding**: Converted categorical features into numeric using one-hot encoding.
+4. **Identify X (independent) and Y (dependent, target)**:
+   X numerical_features = ['age', 'balance', 'duration', 'campaign', 'pdays', 'previous']
+     categorcial converted to numerical= ['job_blue-collar', 'marital_married', 'education_secondary', 'housing_yes', 'loan_yes']
+   Y categorcial but converted to integer for analysis: clients who subscribed (1) Yes and those who didn’t (0) No.
+   
+   
+6. **Categorical Encoding**: Converted categorical features into numeric using one-hot encoding.
 Shape of X before dropping: (4521, 42)
 Shape of X after dropping: (4521, 35)
 Training set shape: (3616, 35), Testing set shape: (905, 35)
+ 
 
 ### Modeling
 - Applied multiple classification algorithms to predict subscription likelihood.
@@ -37,7 +44,8 @@ Training set shape: (3616, 35), Testing set shape: (905, 35)
 
 ## Feature Importance
 
-### Top Features Identified
+### Top Features Identified (Feauture Selection)
+Use insights from the visualizations, correlation matrix, and feature importance analysis to select the most relevant features.
 The following features were found to have the highest correlation with the target variable (`y`):
 
 | Feature             | Correlation |
@@ -52,7 +60,7 @@ The following features were found to have the highest correlation with the targe
 
 ## Evaluation
 
-### Model Performance
+### Model Performance (Model Traning)
 
 | Model                   | Accuracy (%) |
 |-------------------------|--------------|
@@ -64,8 +72,8 @@ The following features were found to have the highest correlation with the targe
 ### Best-Performing Model
 - **Logistic Regression** achieved the highest accuracy (89.94%).
 - **Insights**:
-  - KNN (87.73%) and SVM (89.06%) performed well, suggesting potential non-linear relationships in the data.
-  - Decision Tree (86.52%) underperformed slightly, likely due to overfitting or suboptimal splitting criteria.
+  - **KNN** (87.73%) and SVM (89.06%) performed well, suggesting potential non-linear relationships in the data.
+  - **Decision Tree** (86.52%) underperformed slightly, likely due to overfitting or suboptimal splitting criteria.
 
 ### Hyperparameter Tuning
 
@@ -98,16 +106,28 @@ The following features were found to have the highest correlation with the targe
 ![image](https://github.com/user-attachments/assets/28119ccf-ec39-4ea1-845d-4a736725ad0e)
 
 - **Critical Predictors**:
+  Features below have a strong influence on the Y variable. DUration may be the most important feauture.
   - `duration`: Longer call durations correlate strongly with subscriptions.
   - `poutcome_success`: Past successful interactions increase likelihood.
+    
+- **Recommendation**:
+  - Focus on long conversations with customers as they are more likely to lead to subscriptions.
+  - Target customers with a history of success in previous campaigns (poutcome_success).
+  - October and March show higher correlation with subscriptions. The bank could increase efforts during these months.
+  - Customers with tertiary education and single individuals show a higher likelihood of subscribing. These groups should be prioritized in campaigns.
+    
 - **Targeted Marketing**:
   - Focus on clients with longer call durations and a history of successful outcomes.
 
-### Deployment Steps
+### Future Deployment Steps
 1. Build a deployment pipeline for real-time prediction.
 2. Integrate the model into marketing systems.
 3. Continuously monitor and update the model to maintain performance.
-
+4. Investigate interactions between features (e.g., combining features like poutcome_success and duration).
+5. Combining multiple models using techniques like Random Forest, Gradient Boosting (e.g., XGBoost).
+6. Potential improvements, such as hyperparameter tuning, additional feature engineering, or trying ensemble methods.
+7. SVM with the rbf kernel is computationally expensive, especially on large datasets. When running this data set with SVM it took more than one hour and results were completed.
+   
 ## Technologies Used
 
 ### Programming Languages
