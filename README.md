@@ -7,7 +7,8 @@ You can access the Jupyter notebook [here](https://github.com/AICarope/Classific
 
 ## Business Understanding
 
-### Objective**: Compare the results of k-nearest neighbors, logistic regression, decision trees, and support vector machines
+### Objective**: 
+Compare the results of k-nearest neighbors, logistic regression, decision trees, and support vector machines
 
 - **Goal**: Classify customers likely to subscribe to a campaign based on historical data.
             To compare the performance of the classifiers (k-nearest neighbors, logistic regression, decision trees, and support vector machines)
